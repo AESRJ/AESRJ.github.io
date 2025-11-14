@@ -24,4 +24,7 @@ Permite crear blogs, portafolios, documentación y páginas sin usar bases de da
 &lt;p&gt;3.2 ¿Qué es GitHub Actions?&lt;/p&gt;
 &lt;p&gt;GitHub Actions es un sistema de automatización integrado en GitHub.
 Permite ejecutar tareas automáticamente, como:&lt;/p&gt;
-&lt;p&gt;Construir tu sitio Hugo&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;Construir tu sitio Hugo&lt;/p&gt;</description></item><item><title>Práctica 1: Práctica 1: Elementos básicos de los lenguajes de programación</title><link>https://aesrj.github.io/posts/practica_1/</link><pubDate>Fri, 14 Nov 2025 00:00:00 +0000</pubDate><guid>https://aesrj.github.io/posts/practica_1/</guid><description>&lt;h1 id="práctica-elementos-fundamentales-de-los-lenguajes-de-programación"&gt;Práctica: Elementos Fundamentales de los Lenguajes de Programación&lt;/h1&gt;
+&lt;h2 id="1-introducción"&gt;&lt;strong&gt;1. Introducción&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;El objetivo de esta práctica es identificar los elementos fundamentales de los lenguajes de programación dentro de la aplicación propuesta. Estos elementos permiten comprender cómo funcionan los programas a nivel interno, cómo se organiza la memoria, cómo se gestionan las funciones y cómo se ejecutan las instrucciones.&lt;/p&gt;
+&lt;p&gt;Además, este reporte forma parte del portafolio y debe ser integrado como la &lt;strong&gt;segunda entrada&lt;/strong&gt; del sitio estático generado con Hugo.&lt;/p&gt;</description></item></channel></rss>
