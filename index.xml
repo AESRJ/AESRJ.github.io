@@ -385,13 +385,20 @@ User
 - name: str
 - email: Optional[str]
 - borrowed_items: List[str]
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Relaciones&lt;/strong&gt;:&lt;/p&gt;</description></item><item><title/><link>https://aesrj.github.io/posts/practica_3/reporte/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://aesrj.github.io/posts/practica_3/reporte/</guid><description>&lt;h1 id="reporte-de-laboratorio"&gt;Reporte de Laboratorio&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;Práctica:&lt;/strong&gt; Instalación del entorno Haskell y desarrollo de aplicación TODO&lt;br&gt;
-&lt;strong&gt;Materia:&lt;/strong&gt; Programación Funcional&lt;br&gt;
-&lt;strong&gt;Alumno:&lt;/strong&gt; [Jorge Roel Vasquez ]&lt;br&gt;
-&lt;strong&gt;Fecha:&lt;/strong&gt; [C]&lt;br&gt;
-&lt;strong&gt;Profesor:&lt;/strong&gt; [Carlos Gallegos]&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id="objetivo"&gt;Objetivo&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Relaciones&lt;/strong&gt;:&lt;/p&gt;</description></item><item><title>Práctica 3: Haskell</title><link>https://aesrj.github.io/posts/practica_3/reporte/</link><pubDate>Fri, 14 Nov 2025 00:00:00 +0000</pubDate><guid>https://aesrj.github.io/posts/practica_3/reporte/</guid><description>&lt;h2 id="objetivo"&gt;Objetivo&lt;/h2&gt;
 &lt;p&gt;Instalar correctamente el entorno de desarrollo de &lt;strong&gt;Haskell&lt;/strong&gt; mediante el uso de &lt;strong&gt;Stack&lt;/strong&gt;, y comprender el funcionamiento de una aplicación tipo &lt;strong&gt;TODO list&lt;/strong&gt;, implementada completamente en Haskell.&lt;br&gt;
-Al finalizar, el estudiante deberá ser capaz de ejecutar, modificar y comprender la estructura funcional de la aplicación.&lt;/p&gt;</description></item><item><title/><link>https://aesrj.github.io/posts/primer-post/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://aesrj.github.io/posts/primer-post/</guid><description/></item></channel></rss>
+Al finalizar, el estudiante deberá ser capaz de ejecutar, modificar y comprender la estructura funcional de la aplicación.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="materiales-y-herramientas"&gt;Materiales y Herramientas&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Sistema operativo: Windows / Linux / macOS&lt;/li&gt;
+&lt;li&gt;Conexión a internet&lt;/li&gt;
+&lt;li&gt;Haskell Platform o Stack&lt;/li&gt;
+&lt;li&gt;Editor de texto (VS Code, Sublime Text, etc.)&lt;/li&gt;
+&lt;li&gt;Terminal o línea de comandos&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="-instalación-del-entorno-haskell"&gt;🧩 Instalación del Entorno Haskell&lt;/h2&gt;
+&lt;h3 id="1-instalación-de-stack"&gt;1. Instalación de Stack&lt;/h3&gt;
+&lt;p&gt;Stack es una herramienta que facilita la instalación y manejo de proyectos Haskell.&lt;br&gt;
+En la terminal, se ejecuta:&lt;/p&gt;</description></item><item><title/><link>https://aesrj.github.io/posts/primer-post/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://aesrj.github.io/posts/primer-post/</guid><description/></item></channel></rss>
