@@ -27,78 +27,12 @@ Permite ejecutar tareas automáticamente, como:&lt;/p&gt;
 &lt;p&gt;Construir tu sitio Hugo&lt;/p&gt;</description></item><item><title>Práctica 1: Práctica 1: Elementos básicos de los lenguajes de programación</title><link>https://aesrj.github.io/posts/practica_1/</link><pubDate>Fri, 14 Nov 2025 00:00:00 +0000</pubDate><guid>https://aesrj.github.io/posts/practica_1/</guid><description>&lt;h1 id="práctica-elementos-fundamentales-de-los-lenguajes-de-programación"&gt;Práctica: Elementos Fundamentales de los Lenguajes de Programación&lt;/h1&gt;
 &lt;h2 id="1-introducción"&gt;&lt;strong&gt;1. Introducción&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;El objetivo de esta práctica es identificar los elementos fundamentales de los lenguajes de programación dentro de la aplicación propuesta. Estos elementos permiten comprender cómo funcionan los programas a nivel interno, cómo se organiza la memoria, cómo se gestionan las funciones y cómo se ejecutan las instrucciones.&lt;/p&gt;
-&lt;p&gt;Además, este reporte forma parte del portafolio y debe ser integrado como la &lt;strong&gt;segunda entrada&lt;/strong&gt; del sitio estático generado con Hugo.&lt;/p&gt;</description></item><item><title>Práctica 2: Migración de Biblioteca (C → Python OOP)</title><link>https://aesrj.github.io/posts/practica_2/reporte/</link><pubDate>Fri, 14 Nov 2025 00:00:00 +0000</pubDate><guid>https://aesrj.github.io/posts/practica_2/reporte/</guid><description>&lt;h1 id="práctica-migración-de-biblioteca-de-c-a-python-poo"&gt;Práctica: Migración de Biblioteca de C a Python (POO)&lt;/h1&gt;
+&lt;p&gt;Además, este reporte forma parte del portafolio y debe ser integrado como la &lt;strong&gt;segunda entrada&lt;/strong&gt; del sitio estático generado con Hugo.&lt;/p&gt;</description></item><item><title>Práctica 2: Migración de Biblioteca (C → Python OOP)</title><link>https://aesrj.github.io/posts/practica_2/reporte/</link><pubDate>Fri, 14 Nov 2025 00:00:00 +0000</pubDate><guid>https://aesrj.github.io/posts/practica_2/reporte/</guid><description>&lt;h1 id="reporte-de-practica-migración-de-biblioteca-de-c-a-python-poo"&gt;Reporte de Practica: Migración de Biblioteca de C a Python (POO)&lt;/h1&gt;
 &lt;h2 id="objetivo"&gt;Objetivo&lt;/h2&gt;
 &lt;p&gt;Migrar el programa de Biblioteca originalmente escrito en C (con estructuras) hacia una versión en Python usando Programación Orientada a Objetos (POO). Implementar clases para Biblioteca, Usuarios e Ítems (libros, revistas) e incluir herencia, encapsulamiento, abstracción y polimorfismo. Además implementar persistencia sencilla (JSON), búsquedas, préstamos y devoluciones.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id="1-diseño-orientado-a-objetos-resumen"&gt;1. Diseño orientado a objetos (resumen)&lt;/h2&gt;
-&lt;p&gt;Se definieron las siguientes clases:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;Item&lt;/code&gt; (abstracta): define comportamiento común (id, título, año, estado).&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Book&lt;/code&gt; y &lt;code&gt;Magazine&lt;/code&gt;: subclases de &lt;code&gt;Item&lt;/code&gt; (herencia).&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;User&lt;/code&gt;: representa usuarios con lista de ítems prestados.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Library&lt;/code&gt;: gestor que mantiene colecciones, persiste en JSON y ofrece operaciones.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id="ejemplo-de-código-fragmento"&gt;Ejemplo de código (fragmento)&lt;/h3&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;class&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;Book&lt;/span&gt;(Item):
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;def&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;item_type&lt;/span&gt;(self): &lt;span style="color:#66d9ef"&gt;return&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;book&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;def&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;__init__&lt;/span&gt;(self, item_id, title, author, year, isbn&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#66d9ef"&gt;None&lt;/span&gt;):
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; super()&lt;span style="color:#f92672"&gt;.&lt;/span&gt;&lt;span style="color:#a6e22e"&gt;__init__&lt;/span&gt;(item_id, title, year)
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; self&lt;span style="color:#f92672"&gt;.&lt;/span&gt;author &lt;span style="color:#f92672"&gt;=&lt;/span&gt; author
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ae81ff"&gt;2.&lt;/span&gt; Explicación de conceptos POO con ejemplos
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Clase y Objeto
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Clase: plantilla (por ejemplo Book)&lt;span style="color:#f92672"&gt;.&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Objeto: instancia de la clase: b &lt;span style="color:#f92672"&gt;=&lt;/span&gt; Book(&lt;span style="color:#e6db74"&gt;&amp;#34;b001&amp;#34;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#34;Estructuras&amp;#34;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#34;Autor&amp;#34;&lt;/span&gt;, &lt;span style="color:#ae81ff"&gt;2010&lt;/span&gt;)&lt;span style="color:#f92672"&gt;.&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Herencia
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Book hereda de Item, reutiliza atributos y métodos&lt;span style="color:#f92672"&gt;.&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Encapsulamiento
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Atributos como _id son privados&lt;span style="color:#f92672"&gt;/&lt;/span&gt;protegidos; acceso controlado mediante propiedades o métodos&lt;span style="color:#f92672"&gt;.&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Abstracción
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Item define la interfaz mínima (métodos borrow, give_back, to_dict) que es usada por Library&lt;span style="color:#f92672"&gt;.&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Polimorfismo
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Library llama to_dict() o item_type() sin conocer la subclase exacta (libro o revista)&lt;span style="color:#f92672"&gt;.&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ae81ff"&gt;3.&lt;/span&gt; Funcionalidad implementada
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Registrar usuarios e ítems (libros&lt;span style="color:#f92672"&gt;/&lt;/span&gt;revistas)&lt;span style="color:#f92672"&gt;.&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Buscar ítems por título, autor o tipo&lt;span style="color:#f92672"&gt;.&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Prestar y devolver ítems (validaciones: disponibilidad, quien presta)&lt;span style="color:#f92672"&gt;.&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Persistencia en biblioteca_data&lt;span style="color:#f92672"&gt;.&lt;/span&gt;json&lt;span style="color:#f92672"&gt;.&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Menú de consola simple para interacción&lt;span style="color:#f92672"&gt;.&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ae81ff"&gt;4.&lt;/span&gt; Comparación C vs Python (breve)
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Estructuras en C: el programa original gestionaba structs, arrays y funciones globales para operaciones&lt;span style="color:#f92672"&gt;.&lt;/span&gt; La manipulación de memoria y manejo de cadenas era explícita y propensa a errores&lt;span style="color:#f92672"&gt;.&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;POO en Python: organiza el código en tipos (clases), mejora la modularidad y legibilidad&lt;span style="color:#f92672"&gt;.&lt;/span&gt; Python ofrece manejo automático de memoria (garbage collector) y JSON para persistencia de forma fácil&lt;span style="color:#f92672"&gt;.&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Ventajas de Python&lt;span style="color:#f92672"&gt;/&lt;/span&gt;POO:
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Mayor abstracción y reutilización (herencia)&lt;span style="color:#f92672"&gt;.&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Menos código &lt;span style="color:#960050;background-color:#1e0010"&gt;«&lt;/span&gt;ceremonial&lt;span style="color:#960050;background-color:#1e0010"&gt;»&lt;/span&gt;: no hay punteros&lt;span style="color:#f92672"&gt;/&lt;/span&gt;dereferencias explícitas&lt;span style="color:#f92672"&gt;.&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Más seguro frente a errores de memoria&lt;span style="color:#f92672"&gt;.&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Desventajas:
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Menor control fino sobre memoria y performance frente a C&lt;span style="color:#f92672"&gt;.&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Requiere traducción lógica (no es un copy&lt;span style="color:#f92672"&gt;/&lt;/span&gt;paste)&lt;span style="color:#f92672"&gt;.&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ae81ff"&gt;5.&lt;/span&gt; Conclusiones
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;La migración a POO mejora la estructura &lt;span style="color:#66d9ef"&gt;del&lt;/span&gt; código, facilita la extensión (añadir nuevos tipos de ítems), y reduce errores comunes de manejo de memoria&lt;span style="color:#f92672"&gt;.&lt;/span&gt; Para aplicaciones didácticas y prototipos, Python ofrece un ciclo de desarrollo más rápido y un código más mantenible&lt;span style="color:#f92672"&gt;.&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>Práctica 2: Programación Orientada a Objetos</title><link>https://aesrj.github.io/posts/practica_2/codigo_python_poo/</link><pubDate>Fri, 14 Nov 2025 00:00:00 +0000</pubDate><guid>https://aesrj.github.io/posts/practica_2/codigo_python_poo/</guid><description>&lt;h1 id="codigo-migrado-en-pythonpoo"&gt;Codigo Migrado en python(POO)&lt;/h1&gt;
-&lt;p&gt;Nota final: 0&lt;/p&gt;
-&lt;h2&gt;&lt;/h2&gt;
-&lt;h1 id="1-código-python-archivo-sugerido-biblioteca_poopy"&gt;1) Código Python (archivo sugerido: &lt;code&gt;biblioteca_poo.py&lt;/code&gt;)&lt;/h1&gt;
+&lt;p&gt;Se definieron las siguientes clases:&lt;/p&gt;</description></item><item><title>Práctica 2: Programación Orientada a Objetos</title><link>https://aesrj.github.io/posts/practica_2/codigo_python_poo/</link><pubDate>Fri, 14 Nov 2025 00:00:00 +0000</pubDate><guid>https://aesrj.github.io/posts/practica_2/codigo_python_poo/</guid><description>&lt;h1 id="codigo-migrado-en-pythonpoo"&gt;Codigo Migrado en python(POO)&lt;/h1&gt;
 &lt;p&gt;Guarda este archivo en la raíz del proyecto o en una carpeta &lt;code&gt;biblioteca_python/&lt;/code&gt;. Es autocontenido y usa JSON (&lt;code&gt;data.json&lt;/code&gt;) para persistencia.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;#!/usr/bin/env python3&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# biblioteca_poo.py&lt;/span&gt;
@@ -417,8 +351,6 @@ Permite ejecutar tareas automáticamente, como:&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; print(&lt;span style="color:#e6db74"&gt;&amp;#34;Datos cargados. Ítems:&amp;#34;&lt;/span&gt;, len(library&lt;span style="color:#f92672"&gt;.&lt;/span&gt;items), &lt;span style="color:#e6db74"&gt;&amp;#34; Usuarios:&amp;#34;&lt;/span&gt;, len(library&lt;span style="color:#f92672"&gt;.&lt;/span&gt;users))
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; main_menu(library)
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Qué hace&lt;/strong&gt; (resumen):&lt;/p&gt;</description></item><item><title>Práctica 2: Programación Orientada a Objetos</title><link>https://aesrj.github.io/posts/practica_2/dise%C3%B1o_de_clases/</link><pubDate>Fri, 14 Nov 2025 00:00:00 +0000</pubDate><guid>https://aesrj.github.io/posts/practica_2/dise%C3%B1o_de_clases/</guid><description>&lt;h1 id="diseño-de-clases-uml-textual--explicación"&gt;Diseño de clases (UML textual + explicación)&lt;/h1&gt;
-&lt;p&gt;Nota final: 0&lt;/p&gt;
-&lt;h1 id="diseño-de-clases-uml-textual--explicación-1"&gt;Diseño de clases (UML textual + explicación)&lt;/h1&gt;
 &lt;pre tabindex="0"&gt;&lt;code&gt;Library
 - items: Dict[str, Item]
 - users: Dict[str, User]
