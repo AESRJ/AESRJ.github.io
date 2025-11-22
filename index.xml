@@ -401,4 +401,11 @@ Al finalizar, el estudiante deberá ser capaz de ejecutar, modificar y comprende
 &lt;h2 id="-instalación-del-entorno-haskell"&gt;🧩 Instalación del Entorno Haskell&lt;/h2&gt;
 &lt;h3 id="1-instalación-de-stack"&gt;1. Instalación de Stack&lt;/h3&gt;
 &lt;p&gt;Stack es una herramienta que facilita la instalación y manejo de proyectos Haskell.&lt;br&gt;
-En la terminal, se ejecuta:&lt;/p&gt;</description></item><item><title/><link>https://aesrj.github.io/posts/practica_4/practica_4/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://aesrj.github.io/posts/practica_4/practica_4/</guid><description/></item><item><title/><link>https://aesrj.github.io/posts/primer-post/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://aesrj.github.io/posts/primer-post/</guid><description/></item></channel></rss>
+En la terminal, se ejecuta:&lt;/p&gt;</description></item><item><title>Practica 4</title><link>https://aesrj.github.io/posts/practica_4/practica_4/</link><pubDate>Fri, 14 Nov 2025 00:00:00 +0000</pubDate><guid>https://aesrj.github.io/posts/practica_4/practica_4/</guid><description>&lt;h2 id="práctica-4"&gt;Práctica 4&lt;/h2&gt;
+&lt;h1 id="paradigmas-de-la-programación"&gt;Paradigmas de la Programación&lt;/h1&gt;
+&lt;h1 id="alumno-jorge-roel-vasquez"&gt;Alumno: Jorge Roel Vasquez&lt;/h1&gt;
+&lt;h1 id="fecha-20112025"&gt;Fecha: 20/11/2025&lt;/h1&gt;
+&lt;p&gt;Introducción&lt;/p&gt;
+&lt;p&gt;El paradigma lógico es un enfoque de programación donde los problemas se modelan mediante hechos, reglas y consultas, permitiendo que el motor lógico del lenguaje deduzca respuestas mediante inferencia.&lt;/p&gt;
+&lt;p&gt;En esta práctica se utilizó Prolog, ideal para representar relaciones, trabajar con bases de conocimiento y resolver problemas mediante lógica.&lt;/p&gt;
+&lt;p&gt;Primera sesión Hechos, reglas y bases de conocimiento En la primera sesión se estudiaron los fundamentos del paradigma lógico y la estructura básica de Prolog. Los temas principales fueron:&lt;/p&gt;</description></item><item><title/><link>https://aesrj.github.io/posts/primer-post/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://aesrj.github.io/posts/primer-post/</guid><description/></item></channel></rss>
